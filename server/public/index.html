@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom UI Card</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+    const createHTML = (tag, attributes = {}, children = []) => {
+        const element = document.createElement(tag);
+        for (const [key, value] of Object.entries(attributes)) {
+            element.setAttribute(key, value);
+        }
+        children.forEach(child => {
+            if (typeof child === 'string') {
+                element.appendChild(document.createTextNode(child));
+            } else {
+                element.appendChild(child);
+            }
+        });
+        return element;
+    };
+
+    (function () {
+        fetch('/api/data')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+
+                const app = document.getElementById('app');
+
+                if (data && data.length > 0) {
+                    // Create table and headers
+                    const table = createHTML('table', { border: '1', cellpadding: '10', cellspacing: '0' }, [
+                        createHTML('thead', {}, [
+                            createHTML('tr', {}, [
+                                createHTML('th', {}, ['Portal ID']),
+                                createHTML('th', {}, ['Name']),
+                                createHTML('th', {}, ['Email']),
+                            ])
+                        ])
+                    ]);
+
+                    const tbody = createHTML('tbody');
+
+                    data.forEach(item => {
+                        const row = createHTML('tr', {}, [
+                            createHTML('td', {}, [item.portalId || '']),
+                            createHTML('td', {}, [item.name || '']),
+                            createHTML('td', {}, [item.email || ''])
+                        ]);
+                        tbody.appendChild(row);
+                    });
+
+                    table.appendChild(tbody);
+                    app.appendChild(table);
+                }
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    })();
+</script>
+
+</body>
+</html>
