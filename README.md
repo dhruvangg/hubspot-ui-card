@@ -12,3 +12,5 @@
 ### Approach
 
 Here, I have used static endpoint where all the mongoDB data is rendered on https://hubspot-ui-card.onrender.com/ and that page will be visible on Iframe Popup on Click.
+
+![screenshot](./screenshot.gif)
