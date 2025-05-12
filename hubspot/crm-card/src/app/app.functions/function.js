@@ -2,7 +2,7 @@
 const { MongoClient } = require('mongodb');
 
 exports.main = async (context, sendResponse) => {
-  const uri = 'mongodb+srv://champ:champdecay@champ.cxkmd.mongodb.net/hubspot';
+  const uri = process.env.MONGODB_URI;
   const client = new MongoClient(uri);
 
   try {

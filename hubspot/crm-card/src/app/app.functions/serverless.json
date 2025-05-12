@@ -2,7 +2,7 @@
   "appFunctions": {
     "myFunc": {
       "file": "function.js",
-      "secrets": [],
+      "secrets": ["MONGODB_URI"],
       "endpoint": {
         "path": "fetch-data",
         "method": [
