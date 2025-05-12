@@ -1,19 +1,14 @@
 {
   "name": "MongoDB Contact Info Card",
-  "public": true,
+  "public": false,
   "description": "Custom CRM card that displays contact info from MongoDB",
   "scopes": ["crm.objects.contacts.read"],
+  "uid": "mongodb-contact-info-card",
   "extensions": {
     "crm": {
       "cards": [
         {
-          "id": "mongodb_static_data_card",
-          "title": "MongoDB Info",
-          "objectTypes": ["CONTACT"],
-          "fetch": {
-            "targetUrl": "https://your-domain.com/crm-card",
-            "method": "GET"
-          }
+          "file": "extensions/example-card.json"
         }
       ]
     }

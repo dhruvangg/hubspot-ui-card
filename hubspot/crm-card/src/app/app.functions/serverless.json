@@ -1,8 +1,14 @@
 {
   "appFunctions": {
     "myFunc": {
-      "file": "example-function.js",
-      "secrets": []
+      "file": "function.js",
+      "secrets": [],
+      "endpoint": {
+        "path": "fetch-data",
+        "method": [
+          "GET"
+        ]
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ hubspot.extend((
 const Extension = ({ context, openIframe }) => {
   const handleClick = () => {
     openIframe({
-      uri: "https://hubspot-ui-card.onrender.com/", 
+      uri: "https://49750020.hs-sites.com/data-mongo", 
       height: 1000,
       width: 1000,
       title: 'Content from mongoDB',

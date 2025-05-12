@@ -1,0 +1,23 @@
+{
+  "entry": "F:/projects/node/Hubspot-UI-Card/hubspot/crm-card/src/app/extensions/Example.jsx",
+  "modules": {
+    "internal": [
+      {
+        "module": "F:/projects/node/Hubspot-UI-Card/hubspot/crm-card/src/app/extensions/Example.jsx",
+        "renderedExports": []
+      }
+    ],
+    "external": []
+  },
+  "dataDeps": [],
+  "package": {
+    "name": "hubspot-example-extension",
+    "version": "0.1.0",
+    "author": "HubSpot",
+    "license": "MIT",
+    "dependencies": {
+      "@hubspot/ui-extensions": "latest",
+      "react": "^18.2.0"
+    }
+  }
+}
