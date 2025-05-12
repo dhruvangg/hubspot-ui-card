@@ -2,15 +2,12 @@
 
 ### System Design
 
-- Create an express endpoints to get mongoDB data
 - Run `hs project create` 
+- Create a Serverless endpoint to fetch data
+- Create a Hubspot page to load Mongodb Data because we have only link option to load in popup modal. So Create a new hubspot page and add link in the code for popup.
 - `Join Beta` to use React JSX code for extensions
 - Update necessary changes in extensions
 - Run `hs project upload` 
 - [Enable UI Extension in Hubspot](https://developers.hubspot.com/docs/guides/crm/private-apps/quickstart#4.-view-the-extension-in-hubspot)
-
-### Approach
-
-Here, I have used static endpoint where all the mongoDB data is rendered on https://hubspot-ui-card.onrender.com/ and that page will be visible on Iframe Popup on Click.
 
 ![screenshot](./screenshot.gif)
